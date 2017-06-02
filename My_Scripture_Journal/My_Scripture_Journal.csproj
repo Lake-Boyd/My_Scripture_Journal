@@ -92,6 +92,7 @@
     <Content Include="packages.config" />
     <Content Include="MyScriptureJournal.cshtml" />
     <Content Include="AddScripture.cshtml" />
+    <Content Include="EditScripture.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
