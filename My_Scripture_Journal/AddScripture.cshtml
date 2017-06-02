@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Add a Scripture</title>
+</head>
+<body>
+    <h1>Add a Scripture</h1>
+    <form method="post">
+        <fieldset>
+            <legend>Movie Information</legend>
+            <p>
+                <label for="title">Book:</label>
+                <input type="text" name="title" value="@Request.Form["Book"]" />
+            </p>
+
+            <p>
+                <label for="genre">Chapter:</label>
+                <input type="text" name="genre" value="@Request.Form["Chapter"]" />
+            </p>
+
+            <p>
+                <label for="year">Verse:</label>
+                <input type="text" name="year" value="@Request.Form["Verse"]" />
+            </p>
+
+            <p>
+                <label for="year">Notes:</label>
+                <input type="text" name="year" value="@Request.Form["Notes"]" />
+            </p>
+
+            <p>
+                <label for="year">Date:</label>
+                <input type="text" name="year" value="@Request.Form["Date"]" />
+            </p>
+
+            <p><input type="submit" name="buttonSubmit" value="Add Movie" /></p>
+        </fieldset>
+    </form>
+</body>
+</html>
