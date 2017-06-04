@@ -39,25 +39,25 @@
             <legend>Scripture Information</legend>
             <div class="inputwrap">
                 <div class="labelwrap"><label for="book">Book:</label></div>
-                <input type="text" name="book" value="@Request.Form["Book"]" />
+                <input type="text" id="book" name="book" value="@Request.Form["Book"]" />
                 @Html.ValidationMessage("Book")
             </div>
 
             <div class="inputwrap">
                 <div class="labelwrap"><label for="chapter">Chapter:</label></div>
-                <input type="text" name="chapter" value="@Request.Form["Chapter"]" />
+                <input type="text" id="chapter" name="chapter" value="@Request.Form["Chapter"]" />
                 @Html.ValidationMessage("Chapter")
             </div>
 
             <div class="inputwrap">
                 <div class="labelwrap"><label for="verse">Verse:</label></div>
-                <input type="text" name="verse" value="@Request.Form["Verse"]" />
+                <input type="text" id="verse" name="verse" value="@Request.Form["Verse"]" />
                 @Html.ValidationMessage("Verse")
             </div>
 
             <div class="inputwrap">
-                <div class="labelwrap"><label for="year">Notes:</label></div>
-                <input type="text" name="notes" value="@Request.Form["Notes"]" size="35"/>
+                <div class="labelwrap"><label for="notes">Notes:</label></div>
+                <input type="text" id="notes" name="notes" value="@Request.Form["Notes"]" size="35"/>
                 @Html.ValidationMessage("Notes")
             </div>
 

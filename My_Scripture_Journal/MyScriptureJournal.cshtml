@@ -33,12 +33,12 @@
     <form method="get">
         <div>
             <label for="searchBook">Book to look for: (Leave blank to list all Books.) </label>
-            <input type="text" name="searchBook" value="" />
+            <input type="text" name="searchBook" id="searchBook" value="" />
             <input type="Submit" value="Search Book" />
         </div>
         <div>
             <label for="searchKeyword">Notes contains the following:</label>
-            <input type="text" name="searchKeyword" value="@Request.QueryString["searchKeyword"]" />
+            <input type="text" name="searchKeyword" id="searchKeyword" value="@Request.QueryString["searchKeyword"]" />
             <input type="Submit" value="Search Keyword" /><br />
         </div>
 
