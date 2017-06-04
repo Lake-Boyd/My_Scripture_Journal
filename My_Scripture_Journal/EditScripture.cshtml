@@ -65,14 +65,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Edit a Movie</title>
-    <style>
-        .validation-summary-errors {
-            border: 2px dashed red;
-            color: red;
-            font-weight: bold;
-            margin: 12px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <h1>Edit a Scripture</h1>
@@ -80,26 +73,26 @@
     <form method="post">
         <fieldset>
             <legend>Movie Information</legend>
-
-            <p>
-                <label for="book">Book:</label>
-                <input type="text" name="book" value="@book" />
-            </p>
-
-            <p>
-                <label for="chapter">Chapter:</label>
-                <input type="text" name="chapter" value="@chapter" />
-            </p>
-
-            <p>
-                <label for="verse">YVerse:</label>
-                <input type="text" name="verse" value="@verse" />
-            </p>
-
-            <p>
-                <label for="notes">Notes:</label>
-                <input type="text" name="notes" value="@notes" />
-            </p>
+            
+                <div class="inputwrap">
+                    <div class="labelwrap"><label for="book">Book:</label></div>
+                    <input type="text" name="book" value="@book" />
+                </div>
+            
+                <div class="inputwrap">
+                    <div class="labelwrap"><label for="chapter">Chapter:</label></div>
+                    <input type="text" name="chapter" value="@chapter" />
+                </div>
+            
+                <div class="inputwrap">
+                    <div class="labelwrap"><label for="verse">Verse:</label></div>
+                    <input type="text" name="verse" value="@verse" />
+                </div>
+            
+                <div class="inputwrap">
+                    <div class="labelwrap"><label for="notes">Notes:</label></div>
+                    <input type="text" name="notes" value="@notes" size="35" />
+                </div>
 
             <input type="hidden" name="scriptureid" value="@scriptureId" />
 

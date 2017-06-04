@@ -30,55 +30,43 @@
 <head>
     <meta charset="utf-8" />
     <title>Add a Scripture</title>
-    <style type="text/css">
-        .field-validation-error {
-            font-weight: bold;
-            color: red;
-            background-color: yellow;
-        }
-
-        .validation-summary-errors {
-            border: 2px dashed red;
-            color: red;
-            background-color: yellow;
-            font-weight: bold;
-            margin: 12px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <h1>Add a Scripture</h1>
     <form method="post">
         <fieldset>
             <legend>Scripture Information</legend>
-            <p>
-                <label for="book">Book:</label>
+            <div class="inputwrap">
+                <div class="labelwrap"><label for="book">Book:</label></div>
                 <input type="text" name="book" value="@Request.Form["Book"]" />
                 @Html.ValidationMessage("Book")
-            </p>
+            </div>
 
-            <p>
-                <label for="chapter">Chapter:</label>
+            <div class="inputwrap">
+                <div class="labelwrap"><label for="chapter">Chapter:</label></div>
                 <input type="text" name="chapter" value="@Request.Form["Chapter"]" />
                 @Html.ValidationMessage("Chapter")
-            </p>
+            </div>
 
-            <p>
-                <label for="verse">Verse:</label>
+            <div class="inputwrap">
+                <div class="labelwrap"><label for="verse">Verse:</label></div>
                 <input type="text" name="verse" value="@Request.Form["Verse"]" />
                 @Html.ValidationMessage("Verse")
-            </p>
+            </div>
 
-            <p>
-                <label for="year">Notes:</label>
-                <input type="text" name="notes" value="@Request.Form["Notes"]" />
+            <div class="inputwrap">
+                <div class="labelwrap"><label for="year">Notes:</label></div>
+                <input type="text" name="notes" value="@Request.Form["Notes"]" size="35"/>
                 @Html.ValidationMessage("Notes")
-            </p>
+            </div>
 
 
 
             <p><input type="submit" name="buttonSubmit" value="Add Scripture" /></p>
         </fieldset>
     </form>
+    <p><a href="~/MyScriptureJournal">Return to scripture listing</a></p>
+
 </body>
 </html>

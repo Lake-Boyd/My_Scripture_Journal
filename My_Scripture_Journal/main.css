@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Italianno|Slabo+27px');
+body {
+    width: 810px;
+    margin: 0 auto;
+    font-family: 'Slabo 27px', serif;
+}
+
+h1 {
+    font-family:  'Italianno', cursive;
+    font-size: 3.0em;
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+
+form p {
+    padding-top: 0px;
+    position: relative;
+    bottom: 5px;
+}
+
+
+form div {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    /* border: 1px solid red; */
+    padding: 5px 5px;
+    margin: 10px 4px;
+}
+
+form input {
+    
+    margin-left: 5px;
+    
+}
+
+.inputwrap {
+    display: flex;
+    flex-direction: wrap;
+    /* background: red; */
+    width: 500px;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.labelwrap{
+    
+    width: 50px;
+}
+
+.inputwrap input {
+    
+    height: 20px;
+
+    
+}
+
+
+
+
+
+.grid {
+    margin: 4px;
+    border-collapse: collapse;
+    width: 800px;
+}
+
+    .grid th, .grid td {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+    }
+
+
+.grid td a {
+    
+    font-family: "Courier New", Courier, monospace
+}
+
+.head {
+    background-color: #E8E8E8;
+    font-weight: bold;
+    color: #444;
+}
+
+.alt {
+    background-color: #E8E8E8;
+    color: #000;
+}
+
+.field-validation-error {
+    font-weight: bold;
+    color: red;
+    background-color: yellow;
+}
+
+.validation-summary-errors {
+    border: 2px dashed red;
+    color: red;
+    background-color: yellow;
+    font-weight: bold;
+    margin: 12px;
+}
+

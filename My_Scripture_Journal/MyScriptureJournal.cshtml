@@ -17,7 +17,7 @@
     }
 
     var selectedData = db.Query(selectCommand, searchTerm);
-    var grid = new WebGrid(source: selectedData, defaultSort: "Book", rowsPerPage: 3);
+    var grid = new WebGrid(source: selectedData, defaultSort: "Book", rowsPerPage: 5);
 
 }
 <!DOCTYPE html>
@@ -25,38 +25,16 @@
 <head>
     <meta charset="utf-8" />
     <title>Scripture Journal</title>
-    <style type="text/css">
-        .grid {
-            margin: 4px;
-            border-collapse: collapse;
-            width: 800px;
-        }
+    <link rel="stylesheet" type="text/css" href="main.css">
 
-            .grid th, .grid td {
-                border: 1px solid #C0C0C0;
-                padding: 5px;
-            }
-
-        .head {
-            background-color: #E8E8E8;
-            font-weight: bold;
-            color: #FFF;
-        }
-
-        .alt {
-            background-color: #E8E8E8;
-            color: #000;
-        }
-    </style>
 </head>
 <body>
     <h1>Scripture Journal</h1>
     <form method="get">
         <div>
-            <label for="searchBook">Book to look for:</label>
+            <label for="searchBook">Book to look for: (Leave blank to list all Books.) </label>
             <input type="text" name="searchBook" value="" />
-            <input type="Submit" value="Search Book" /><br />
-            (Leave blank to list all Books.)<br />
+            <input type="Submit" value="Search Book" />
         </div>
         <div>
             <label for="searchKeyword">Notes contains the following:</label>
@@ -77,7 +55,8 @@
         grid.Column("Chapter", canSort: false),
         grid.Column("Verse", canSort: false),
         grid.Column("Notes", canSort: false),
-        grid.Column("Date")
+        grid.Column("Date"),
+        grid.Column(format: @<a href="~/DeleteScripture?id=@item.ID">Delete</a>)
         )
        )
     </div>
