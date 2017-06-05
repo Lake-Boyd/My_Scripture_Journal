@@ -44,14 +44,15 @@
         Validation.RequireField("Verse", "You must enter a verse");
         Validation.RequireField("Notes", "You haven't entered any notes.");
 
-        book = Request.Form["book"];
-        chapter = Convert.ToInt32(Request.Form["chapter"]);
-        verse = Convert.ToInt32(Request.Form["verse"]);
-        notes = Request.Form["notes"];
-        scriptureId = Request.Form["scriptureId"];
+
 
         if (Validation.IsValid())
         {
+            book = Request.Form["book"];
+            chapter = Convert.ToInt32(Request.Form["chapter"]);
+            verse = Convert.ToInt32(Request.Form["verse"]);
+            notes = Request.Form["notes"];
+            scriptureId = Request.Form["scriptureId"];
             var db = Database.Open("WebPagesScriptureJournal");
             var updateCommand = "UPDATE Scripture_Journal SET Book=@0, Chapter=@1, Verse=@2, Notes=@3, Date=@4 WHERE Id=@5";
             db.Execute(updateCommand, book, chapter, verse, notes, DateTime.Now, scriptureId);
